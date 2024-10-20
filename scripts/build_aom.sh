@@ -14,6 +14,5 @@ mkdir -p build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=${SOURCE} -DBUILD_SHARED_LIBS=OFF -DENABLE_DOCS=OFF -DENABLE_EXAMPLES=OFF -DENABLE_TESTDATA=OFF -DENABLE_TESTS=OFF -DENABLE_TOOLS=OFF ..
 make -j ${CPU_NUM} && sudo make install
 
-cd ../../
 
 sleep 1
