@@ -45,5 +45,6 @@
   "zlib": "https://downloads.sourceforge.net/project/libpng/zlib/1.3.1/zlib-1.3.1.tar.gz",
   "libarchive": "https://www.libarchive.org/downloads/libarchive-3.7.7.tar.xz",
   "libogg": "https://ftp.osuosl.org/pub/xiph/releases/ogg/libogg-1.3.5.tar.gz",
-  "libsamplerate": "https://github.com/libsndfile/libsamplerate/archive/refs/tags/0.2.2.tar.gz"
+  "libsamplerate": "https://github.com/libsndfile/libsamplerate/archive/refs/tags/0.2.2.tar.gz",
+  "what": ""
 }
