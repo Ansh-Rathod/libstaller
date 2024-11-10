@@ -1,5 +1,7 @@
 # compile_function.sh
 
+set -e
+
 #!/bin/bash
 
 export SOURCE="/Users/anshrathod/desktop/ffmpeg_build_play/sw"
@@ -20,7 +22,7 @@ function download_tar() {
 
   # Download the file if it does not exist
   if [ ! -f "${COMPILED}/${zipname}" ]; then
-    curl -o "${COMPILED}/${zipname}" "${url}"
+    curl -L -o "${COMPILED}/${zipname}" "${url}"
   fi
 
   # Determine the correct tar flag based on the file extension
@@ -29,6 +31,8 @@ function download_tar() {
     tar_flag="-xzvf"
   elif [[ ${zipname} == *.tar.bz2 ]]; then
     tar_flag="-xjvf"
+  elif [[ ${zipname} == *.tar.xz ]]; then
+    tar_flag="-xJvf"
   else
     echo "Unsupported file type: ${zipname}"
     return 1
@@ -51,7 +55,7 @@ function download_git() {
 
   echo "♻️  Start compiling ${name}"
 
-  rm -rf "${COMPILED}/${name}"
+  # rm -rf "${COMPILED}/${name}"
 
   # Download the file if it does not exist
   if [ ! -d "${COMPILED}/${name}" ]; then

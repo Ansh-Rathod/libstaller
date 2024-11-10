@@ -37,7 +37,7 @@ export LDFLAGS="-framework Foundation -framework Cocoa"
 CFLAGS="-Wno-int-conversion" CXXFLAGS="-Wno-int-conversion" ./configure --disable-debug --prefix=${SOURCE} --with-pc-path=${SOURCE}/lib/pkgconfig --with-internal-glib --disable-shared --enable-static
 
 make -j 10
-make install
+sudo make install
 
 unset LDFLAGS
 sleep 1
