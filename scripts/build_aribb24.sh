@@ -21,5 +21,6 @@ cd ${COMPILED}/aribb24-v1.0.4
 
 ./bootstrap
 ./configure --prefix=${SOURCE} --disable-shared --enable-static --disable-silent-rules
+
 make -j ${CPU_NUM} && sudo make install
 
