@@ -10,7 +10,7 @@ cmake -DCMAKE_INSTALL_PREFIX:PATH=${SOURCE} -DENABLE_C_DEPS=ON -DLIBTYPE=STATIC 
 
 make -j 10
 
-make install
+sudo make install
 
 rm ${SOURCE}/lib/libopenjp2.2.5.0.dy*
 rm ${SOURCE}/lib/libopenjp2.dy*

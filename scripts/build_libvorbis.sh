@@ -6,7 +6,9 @@ zipname="libvorbis-1.3.7.tar.xz"
 
 download_tar "$url" "$name" "$zipname"
 
-make clean
+./autogen.sh
+
+sed -i '' 's/ -force_cpusubtype_ALL//g' configure
 
 ./configure --prefix=${SOURCE} --with-ogg-libraries=${SOURCE}/lib --with-ogg-includes=${SOURCE}/include/ --enable-static --disable-shared
 

@@ -77,6 +77,6 @@ libtool -static -o libx265.a libx265_main.a libx265_main10.a libx265_main12.a 2>
 
 # Install
 echo "📦 Installing..."
-make install
+sudo make install
 
 echo "✅ Build completed successfully!"

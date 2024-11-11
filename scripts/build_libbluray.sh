@@ -9,7 +9,9 @@ name="libbluray-1.3.4"
 zipname="libbluray-1.3.4.tar.bz2"
 
 # Call the compile function
-download_tar "$url" "$name" "$zipname"
+# download_tar "$url" "$name" "$zipname"
+
+cd "${COMPILED}/${name}"
 
 ./bootstrap
 
@@ -17,4 +19,4 @@ download_tar "$url" "$name" "$zipname"
 
 make -j 14
 
-make install
+sudo make install

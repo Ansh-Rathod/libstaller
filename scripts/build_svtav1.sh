@@ -10,4 +10,4 @@ cmake -DCMAKE_INSTALL_PREFIX:PATH=${SOURCE} -DCMAKE_BUILD_TYPE=Release -DBUILD_D
 
 make -j 10
 
-make install
+sudo make install
